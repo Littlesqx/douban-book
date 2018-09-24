@@ -1,6 +1,6 @@
 <h1 align="center"> douban-book </h1>
 
-<p align="center"> :mag: :books: A book SDK, which can be used to get information of a book. 一个简单的图书 SDK，你可以使用它用于获取指定书籍的基本信息。</p>
+<p align="center"> :mag: :books: A book SDK, which can be used to get information of a book. <br>一个简单的图书 SDK，你可以使用它用于获取指定书籍的基本信息。</p>
 
 [![Build Status](https://travis-ci.org/Littlesqx/douban-book.svg?branch=master)](https://travis-ci.org/Littlesqx/douban-book)
 [![StyleCI](https://github.styleci.io/repos/150088434/shield?branch=master)](https://github.styleci.io/repos/150088434)
