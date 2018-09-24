@@ -1,7 +1,8 @@
 <h1 align="center"> douban-book </h1>
 
-<p align="center"> A book SDK.</p>
+<p align="center"> :green_book: A book SDK.</p>
 
+[![Build Status](https://travis-ci.org/Littlesqx/douban-book.svg?branch=master)](https://travis-ci.org/Littlesqx/douban-book)
 
 ## Installing
 
