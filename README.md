@@ -1,13 +1,13 @@
 <h1 align="center"> douban-book </h1>
 
-<p align="center"> :green_book: A book SDK.</p>
+<p align="center"> :mag: :books: A book SDK, which can be used to get information of a book. 一个简单的图书 SDK，你可以使用它用于获取指定书籍的基本信息。</p>
 
 [![Build Status](https://travis-ci.org/Littlesqx/douban-book.svg?branch=master)](https://travis-ci.org/Littlesqx/douban-book)
 [![StyleCI](https://github.styleci.io/repos/150088434/shield?branch=master)](https://github.styleci.io/repos/150088434)
 ## Installing
 
 ```shell
-$ composer require littlesqx/douban-book -vvv
+composer require littlesqx/douban-book -vvv
 ```
 
 ## Usage
@@ -22,17 +22,29 @@ $app = new Littlesqx\Book\Application();
 $isbn = '9787115473899';
 
 // get a book entity
-$book = $app->getBook($isbn);
+try {
+    $book = $app->getBook($isbn);
+    if ($book) {
+        // use as an array
+        $book->toArray();
+        
+        // or get json format
+        $book->toJSON();
+        
+        // also, get property directly is allowed
+        $book->getTitle();
+        $book->getPrice();
+    }
+} catch (\Exception $exception) {
+    // handle exception
+}
 
-// use as an array
-$book->toArray();
+```
 
-// or get json format
-$book->toJSON();
+## Test
 
-// also, get property directly is allowed
-$book->getTitle();
-$book->getPrice();
+```shell
+composer test
 ```
 
 ## Contributing
