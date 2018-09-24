@@ -30,6 +30,7 @@ class BookFactory
             return null;
         }
         $book = new Book();
+
         return $book->setIsbn($params['isbn13'])
             ->setTitle($params['title'])
             ->setSubtitle($params['subtitle'])
