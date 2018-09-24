@@ -11,7 +11,6 @@
 
 namespace Littlesqx\Book;
 
-
 use Littlesqx\Book\Entity\Book;
 use Littlesqx\Book\Entity\Entity as EntityInterface;
 
@@ -21,9 +20,10 @@ class BookFactory
      * make a book entity.
      *
      * @param $params
+     *
      * @return EntityInterface|null
      */
-    public static function make($params):? EntityInterface
+    public static function make($params): ? EntityInterface
     {
         $params = \json_decode($params, true);
         if (!isset($params['title'])) {
@@ -42,6 +42,7 @@ class BookFactory
             ->setSummary($params['summary'])
             ->setCover($params['images']['large'])
             ->setTags(array_column($params['tags'], 'name'));
+
         return $book;
     }
 }

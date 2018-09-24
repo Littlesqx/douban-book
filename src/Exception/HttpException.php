@@ -12,10 +12,8 @@
 namespace Littlesqx\Book\Exception;
 
 /**
- * Class HttpException
- * @package Littlesqx\Book\Exception
+ * Class HttpException.
  */
 class HttpException extends Exception
 {
-
 }

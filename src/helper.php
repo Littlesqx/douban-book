@@ -10,18 +10,20 @@
  */
 
 if (!function_exists('array_to_path')) {
-
     /**
-     * input: ['foo' => 'bar'], output: foo/bar
+     * input: ['foo' => 'bar'], output: foo/bar.
      *
      * @param $array
+     *
      * @return string
      */
-    function array_to_path($array): string {
+    function array_to_path($array): string
+    {
         $path = '';
         foreach ($array as $key => $value) {
             $path .= "{$key}/{$value}";
         }
+
         return $path;
     }
 }
