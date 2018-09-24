@@ -12,10 +12,8 @@
 namespace Littlesqx\Book\Exception;
 
 /**
- * Class Exception
- * @package Littlesqx\Exception
+ * Class Exception.
  */
 class Exception extends \Exception
 {
-
 }

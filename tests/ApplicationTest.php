@@ -31,7 +31,7 @@ class ApplicationTest extends TestCase
     public function testGetBookException(string $isbn)
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Invalid isbn code(isbn10 or isbn13): ' . $isbn);
+        $this->expectExceptionMessage('Invalid isbn code(isbn10 or isbn13): '.$isbn);
         (new Application())->getBook($isbn);
         $this->fail('Failed to assert getBook throw exception with invalid argument.');
     }
@@ -45,7 +45,7 @@ class ApplicationTest extends TestCase
     {
         return [
             ['000123456789'],
-            ['123456789']
+            ['123456789'],
         ];
     }
 
@@ -61,7 +61,7 @@ class ApplicationTest extends TestCase
         $response = new Response(200, [], '{}');
         $client = \Mockery::mock(Client::class);
         $client->allows()
-            ->get('https://api.douban.com/v2/book/isbn/' . $isbn)
+            ->get('https://api.douban.com/v2/book/isbn/'.$isbn)
             ->andReturn($response);
 
         $app = \Mockery::mock(Application::class)->makePartial();
@@ -77,7 +77,7 @@ class ApplicationTest extends TestCase
         );
         $client = \Mockery::mock(Client::class);
         $client->allows()
-            ->get('https://api.douban.com/v2/book/isbn/' . $isbn)
+            ->get('https://api.douban.com/v2/book/isbn/'.$isbn)
             ->andReturn($response);
 
         $app = \Mockery::mock(Application::class)->makePartial();
@@ -94,12 +94,12 @@ class ApplicationTest extends TestCase
     public function getBookProvider()
     {
         return [
-            ['0123456789']
+            ['0123456789'],
         ];
     }
 
     /**
-     * test for getHttpClient
+     * test for getHttpClient.
      */
     public function testGetHttpClient()
     {

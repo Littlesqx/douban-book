@@ -14,62 +14,62 @@ namespace Littlesqx\Book\Entity;
 class Book implements Entity
 {
     /**
-     * @var string $isbn book's isbn13 code.
+     * @var string book's isbn13 code
      */
     private $isbn;
 
     /**
-     * @var string $title book's title.
+     * @var string book's title
      */
     private $title;
 
     /**
-     * @var string $subtitle book's subtitle
+     * @var string book's subtitle
      */
     private $subtitle;
 
     /**
-     * @var array $author book's authors
+     * @var array book's authors
      */
     private $author;
 
     /**
-     * @var string $authorIntro authors' introduction.
+     * @var string authors' introduction
      */
     private $authorIntro;
 
     /**
-     * @var string $publicationDate book's publication date.
+     * @var string book's publication date
      */
     private $publicationDate;
 
     /**
-     * @var string $publisher book's publisher.
+     * @var string book's publisher
      */
     private $publisher;
 
     /**
-     * @var array $tags book's tags.
+     * @var array book's tags
      */
     private $tags;
 
     /**
-     * @var string $catalog book's catalog.
+     * @var string book's catalog
      */
     private $catalog;
 
     /**
-     * @var string $summary book's summary.
+     * @var string book's summary
      */
     private $summary;
 
     /**
-     * @var string $price book's price.
+     * @var string book's price
      */
     private $price;
 
     /**
-     * @var string $cover book's cover (image url)
+     * @var string book's cover (image url)
      */
     private $cover;
 
@@ -83,11 +83,13 @@ class Book implements Entity
 
     /**
      * @param string $cover
+     *
      * @return $this
      */
     public function setCover(string $cover)
     {
         $this->cover = $cover;
+
         return $this;
     }
 
@@ -101,11 +103,13 @@ class Book implements Entity
 
     /**
      * @param string $isbn
+     *
      * @return $this
      */
     public function setIsbn(string $isbn)
     {
         $this->isbn = $isbn;
+
         return $this;
     }
 
@@ -119,11 +123,13 @@ class Book implements Entity
 
     /**
      * @param string $title
+     *
      * @return $this
      */
     public function setTitle(string $title)
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -137,11 +143,13 @@ class Book implements Entity
 
     /**
      * @param string $subtitle
+     *
      * @return $this
      */
     public function setSubtitle(string $subtitle)
     {
         $this->subtitle = $subtitle;
+
         return $this;
     }
 
@@ -155,11 +163,13 @@ class Book implements Entity
 
     /**
      * @param array $author
+     *
      * @return $this
      */
     public function setAuthor(array $author)
     {
         $this->author = $author;
+
         return $this;
     }
 
@@ -173,11 +183,13 @@ class Book implements Entity
 
     /**
      * @param string $authorIntro
+     *
      * @return $this
      */
     public function setAuthorIntro(string $authorIntro)
     {
         $this->authorIntro = $authorIntro;
+
         return $this;
     }
 
@@ -191,11 +203,13 @@ class Book implements Entity
 
     /**
      * @param string $publicationDate
+     *
      * @return $this
      */
     public function setPublicationDate(string $publicationDate)
     {
         $this->publicationDate = $publicationDate;
+
         return $this;
     }
 
@@ -209,11 +223,13 @@ class Book implements Entity
 
     /**
      * @param string $publisher
+     *
      * @return $this
      */
     public function setPublisher(string $publisher)
     {
         $this->publisher = $publisher;
+
         return $this;
     }
 
@@ -227,11 +243,13 @@ class Book implements Entity
 
     /**
      * @param array $tags
+     *
      * @return $this
      */
     public function setTags(array $tags)
     {
         $this->tags = $tags;
+
         return $this;
     }
 
@@ -245,11 +263,13 @@ class Book implements Entity
 
     /**
      * @param string $catalog
+     *
      * @return $this
      */
     public function setCatalog(string $catalog)
     {
         $this->catalog = $catalog;
+
         return $this;
     }
 
@@ -263,11 +283,13 @@ class Book implements Entity
 
     /**
      * @param string $summary
+     *
      * @return $this
      */
     public function setSummary(string $summary)
     {
         $this->summary = $summary;
+
         return $this;
     }
 
@@ -281,11 +303,13 @@ class Book implements Entity
 
     /**
      * @param string $price
+     *
      * @return $this
      */
     public function setPrice(string $price)
     {
         $this->price = $price;
+
         return $this;
     }
 
@@ -308,7 +332,7 @@ class Book implements Entity
             'tags' => $this->tags,
             'catalog' => $this->catalog,
             'cover' => $this->cover,
-            'summary' => $this->summary
+            'summary' => $this->summary,
         ];
     }
 

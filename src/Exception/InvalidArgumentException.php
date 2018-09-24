@@ -12,10 +12,8 @@
 namespace Littlesqx\Book\Exception;
 
 /**
- * Class InvalidArgumentException
- * @package Littlesqx\Book\Exception
+ * Class InvalidArgumentException.
  */
 class InvalidArgumentException extends Exception
 {
-
 }

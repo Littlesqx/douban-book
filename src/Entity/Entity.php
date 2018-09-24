@@ -12,10 +12,11 @@
 namespace Littlesqx\Book\Entity;
 
 /**
- * Interface EntityInterface
+ * Interface EntityInterface.
  */
 interface Entity
 {
     public function toArray();
+
     public function toJSON();
 }
