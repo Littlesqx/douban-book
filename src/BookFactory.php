@@ -30,7 +30,7 @@ class BookFactory
             return null;
         }
         $book = new Book();
-        $book->setIsbn($params['isbn13'])
+        return $book->setIsbn($params['isbn13'])
             ->setTitle($params['title'])
             ->setSubtitle($params['subtitle'])
             ->setAuthor($params['author'])
@@ -42,7 +42,5 @@ class BookFactory
             ->setSummary($params['summary'])
             ->setCover($params['images']['large'])
             ->setTags(array_column($params['tags'], 'name'));
-
-        return $book;
     }
 }

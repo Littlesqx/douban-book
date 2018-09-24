@@ -23,5 +23,8 @@
         "files": [
             "src/helper.php"
         ]
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
     }
 }

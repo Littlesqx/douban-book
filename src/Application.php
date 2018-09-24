@@ -18,8 +18,14 @@ use Littlesqx\Book\Exception\InvalidArgumentException;
 
 class Application
 {
+    /**
+     * @var array http client configuration.
+     */
     protected $httpOptions = [];
 
+    /**
+     * @var string request api url, via douban/v2.
+     */
     protected $requestUrl = 'https://api.douban.com/v2/book/';
 
     /**
@@ -72,7 +78,6 @@ class Application
             throw new InvalidArgumentException('Invalid isbn code(isbn10 or isbn13): '.$isbn);
         }
         $queryParams = ['isbn' => $isbn];
-
         try {
             $response = $this->getHttpClient()->get(
               $this->requestUrl.array_to_path($queryParams)
