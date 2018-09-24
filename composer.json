@@ -1,0 +1,27 @@
+{
+    "name": "littlesqx/douban-book",
+    "description": "A book SDK.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "littlesqx",
+            "email": "littlesqx@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3",
+        "mockery/mockery": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Littlesqx\\Book\\": "src"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    }
+}
