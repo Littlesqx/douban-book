@@ -3,7 +3,7 @@
 <p align="center"> :green_book: A book SDK.</p>
 
 [![Build Status](https://travis-ci.org/Littlesqx/douban-book.svg?branch=master)](https://travis-ci.org/Littlesqx/douban-book)
-
+[![StyleCI](https://github.styleci.io/repos/150088434/shield?branch=master)](https://github.styleci.io/repos/150088434)
 ## Installing
 
 ```shell
