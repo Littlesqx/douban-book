@@ -12,7 +12,28 @@ $ composer require littlesqx/douban-book -vvv
 
 ## Usage
 
-TODO
+```php
+<?php
+
+// init app
+$app = new Littlesqx\Book\Application();
+
+// book's isbn10/isbn13 code
+$isbn = '9787115473899';
+
+// get a book entity
+$book = $app->getBook($isbn);
+
+// use as an array
+$book->toArray();
+
+// or get json format
+$book->toJSON();
+
+// also, get property directly is allowed
+$book->getTitle();
+$book->getPrice();
+```
 
 ## Contributing
 
