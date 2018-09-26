@@ -4,6 +4,12 @@
 
 [![Build Status](https://travis-ci.org/Littlesqx/douban-book.svg?branch=master)](https://travis-ci.org/Littlesqx/douban-book)
 [![StyleCI](https://github.styleci.io/repos/150088434/shield?branch=master)](https://github.styleci.io/repos/150088434)
+
+## Requirement
+
+- PHP >= 7.0
+- Composer
+
 ## Installing
 
 ```shell
@@ -15,8 +21,10 @@ composer require littlesqx/douban-book -vvv
 ```php
 <?php
 
+use Littlesqx\Book\Application;
+
 // init app
-$app = new Littlesqx\Book\Application();
+$app = new Application();
 
 // book's isbn10/isbn13 code
 $isbn = '9787115473899';

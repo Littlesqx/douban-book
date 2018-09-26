@@ -12,7 +12,6 @@
 namespace Littlesqx\Book;
 
 use Littlesqx\Book\Entity\Book;
-use Littlesqx\Book\Entity\Entity as EntityInterface;
 
 class BookFactory
 {
@@ -21,9 +20,9 @@ class BookFactory
      *
      * @param $params
      *
-     * @return EntityInterface|null
+     * @return Book|null
      */
-    public static function make($params): ? EntityInterface
+    public static function make($params): ? Book
     {
         $params = \json_decode($params, true);
         if (!isset($params['title'])) {

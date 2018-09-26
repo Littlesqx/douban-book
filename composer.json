@@ -1,6 +1,6 @@
 {
     "name": "littlesqx/douban-book",
-    "description": "A book SDK.",
+    "description": "A book SDK, which can be used to get information of a book.",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.0.0",
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {

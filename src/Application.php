@@ -12,7 +12,7 @@
 namespace Littlesqx\Book;
 
 use GuzzleHttp\Client;
-use Littlesqx\Book\Entity\Entity;
+use Littlesqx\Book\Entity\Book;
 use Littlesqx\Book\Exception\HttpException;
 use Littlesqx\Book\Exception\InvalidArgumentException;
 
@@ -67,12 +67,12 @@ class Application
      *
      * @param string $isbn
      *
-     * @return Entity
+     * @return Book
      *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
-    public function getBook(string $isbn): ? Entity
+    public function getBook(string $isbn): ? Book
     {
         if (13 !== strlen($isbn) && 10 !== strlen($isbn)) {
             throw new InvalidArgumentException('Invalid isbn code(isbn10 or isbn13): '.$isbn);
