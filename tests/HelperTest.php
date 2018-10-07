@@ -18,14 +18,14 @@ class HelperTest extends TestCase
     public function testArrayToPath()
     {
         $array = [
-            'foo' => 'bar'
+            'foo' => 'bar',
         ];
         $path = array_to_path($array);
         $this->assertSame('foo/bar', $path);
 
         $array = [
             'foo' => 'bar',
-            ' ' => ' '
+            ' ' => ' ',
         ];
         $path = array_to_path($array);
         $this->assertSame('foo/bar', $path);

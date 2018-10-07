@@ -14,5 +14,6 @@ namespace Littlesqx\Book\Interfaces;
 interface Entity
 {
     public function toArray();
+
     public function toJSON();
 }
