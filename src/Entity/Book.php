@@ -11,6 +11,8 @@
 
 namespace Littlesqx\Book\Entity;
 
+use Littlesqx\Book\Interfaces\Entity;
+
 class Book implements Entity
 {
     /**

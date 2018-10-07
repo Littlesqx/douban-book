@@ -9,14 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Littlesqx\Book\Entity;
+namespace Littlesqx\Book\Interfaces;
 
-/**
- * Interface EntityInterface.
- */
-interface Entity
+interface Factory
 {
-    public function toArray();
-
-    public function toJSON();
+    public static function make($params);
 }

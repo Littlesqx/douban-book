@@ -15,6 +15,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
 use Littlesqx\Book\Application;
+use Littlesqx\Book\Entity\Book;
 use Littlesqx\Book\Entity\Entity;
 use Littlesqx\Book\Exception\HttpException;
 use Littlesqx\Book\Exception\InvalidArgumentException;
@@ -83,7 +84,7 @@ class ApplicationTest extends TestCase
         $app = \Mockery::mock(Application::class)->makePartial();
         $app->allows()->getHttpClient()->andReturn($client);
 
-        $this->assertInstanceOf(Entity::class, $app->getBook($isbn));
+        $this->assertInstanceOf(Book::class, $app->getBook($isbn));
     }
 
     /**

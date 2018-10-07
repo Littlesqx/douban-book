@@ -21,6 +21,9 @@ if (!function_exists('array_to_path')) {
     {
         $path = '';
         foreach ($array as $key => $value) {
+            if ('' === trim($key)) {
+                continue;
+            }
             $path .= "{$key}/{$value}";
         }
 

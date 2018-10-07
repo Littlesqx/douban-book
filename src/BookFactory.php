@@ -12,8 +12,9 @@
 namespace Littlesqx\Book;
 
 use Littlesqx\Book\Entity\Book;
+use Littlesqx\Book\Interfaces\Factory;
 
-class BookFactory
+class BookFactory implements Factory
 {
     /**
      * make a book entity.
