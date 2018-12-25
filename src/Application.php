@@ -80,6 +80,7 @@ class Application
             throw new InvalidArgumentException('Invalid isbn code(isbn10 or isbn13): '.$isbn);
         }
         $queryParams = ['isbn' => $isbn];
+
         try {
             $response = $this->getHttpClient()->get($this->requestUrl.array_to_path($queryParams));
             if (200 === $response->getStatusCode()) {
@@ -89,6 +90,7 @@ class Application
             if ($e instanceof InvalidResponseException) {
                 throw $e;
             }
+
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
     }

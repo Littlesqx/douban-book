@@ -336,6 +336,7 @@ class Book implements Entity
     public function setAltUrl(string $altUrl)
     {
         $this->altUrl = $altUrl;
+
         return $this;
     }
 
