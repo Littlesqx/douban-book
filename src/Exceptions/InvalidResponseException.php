@@ -11,8 +11,6 @@
 
 namespace Littlesqx\Book\Exceptions;
 
-
 class InvalidResponseException extends Exception
 {
-
 }

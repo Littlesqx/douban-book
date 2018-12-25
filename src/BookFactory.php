@@ -23,6 +23,7 @@ class BookFactory implements Factory
      * @param $body
      *
      * @return Book
+     *
      * @throws InvalidResponseException
      */
     public static function make($body): Book
