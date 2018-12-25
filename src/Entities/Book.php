@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Littlesqx\Book\Entity;
+namespace Littlesqx\Book\Entities;
 
 use Littlesqx\Book\Interfaces\Entity;
 
@@ -74,6 +74,11 @@ class Book implements Entity
      * @var string book's cover (image url)
      */
     private $cover;
+
+    /**
+     * @var string book page in douban
+     */
+    private $altUrl;
 
     /**
      * @return string
@@ -312,6 +317,25 @@ class Book implements Entity
     {
         $this->price = $price;
 
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAltUrl(): string
+    {
+        return $this->altUrl;
+    }
+
+    /**
+     * @param string $altUrl
+     *
+     * @return $this
+     */
+    public function setAltUrl(string $altUrl)
+    {
+        $this->altUrl = $altUrl;
         return $this;
     }
 

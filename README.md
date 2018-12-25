@@ -43,7 +43,7 @@ try {
         $book->getTitle();
         $book->getPrice();
     }
-} catch (\Exception $exception) {
+} catch (\Exceptions $exception) {
     // handle exception
 }
 

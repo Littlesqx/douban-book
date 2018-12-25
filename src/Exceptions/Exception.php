@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Littlesqx\Book\Exception;
+namespace Littlesqx\Book\Exceptions;
 
 /**
- * Class Exception.
+ * Class Exceptions.
  */
 class Exception extends \Exception
 {

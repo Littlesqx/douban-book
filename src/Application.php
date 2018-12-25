@@ -12,9 +12,9 @@
 namespace Littlesqx\Book;
 
 use GuzzleHttp\Client;
-use Littlesqx\Book\Entity\Book;
-use Littlesqx\Book\Exception\HttpException;
-use Littlesqx\Book\Exception\InvalidArgumentException;
+use Littlesqx\Book\Entities\Book;
+use Littlesqx\Book\Exceptions\HttpException;
+use Littlesqx\Book\Exceptions\InvalidArgumentException;
 
 class Application
 {
@@ -78,11 +78,8 @@ class Application
             throw new InvalidArgumentException('Invalid isbn code(isbn10 or isbn13): '.$isbn);
         }
         $queryParams = ['isbn' => $isbn];
-
         try {
-            $response = $this->getHttpClient()->get(
-              $this->requestUrl.array_to_path($queryParams)
-            );
+            $response = $this->getHttpClient()->get($this->requestUrl.array_to_path($queryParams));
             if (200 === $response->getStatusCode()) {
                 return BookFactory::make($response->getBody()->getContents());
             }

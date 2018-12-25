@@ -15,10 +15,10 @@ use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
 use Littlesqx\Book\Application;
-use Littlesqx\Book\Entity\Book;
-use Littlesqx\Book\Entity\Entity;
-use Littlesqx\Book\Exception\HttpException;
-use Littlesqx\Book\Exception\InvalidArgumentException;
+use Littlesqx\Book\Entities\Book;
+use Littlesqx\Book\Entities\Entity;
+use Littlesqx\Book\Exceptions\HttpException;
+use Littlesqx\Book\Exceptions\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Mockery\Matcher\AnyArgs;
 
@@ -74,7 +74,7 @@ class ApplicationTest extends TestCase
             200, [],
             '{"title":"","price":"","author":[],"publisher":""'
             .',"author_intro":"","subtitle":"","isbn13":"","images":{"large":""},'
-            .'"catalog":"","pubdate":"","tags":[],"summary":""}'
+            .'"catalog":"","pubdate":"","tags":[],"summary":"","alt_url":""}'
         );
         $client = \Mockery::mock(Client::class);
         $client->allows()

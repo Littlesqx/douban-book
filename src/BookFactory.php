@@ -11,7 +11,7 @@
 
 namespace Littlesqx\Book;
 
-use Littlesqx\Book\Entity\Book;
+use Littlesqx\Book\Entities\Book;
 use Littlesqx\Book\Interfaces\Factory;
 
 class BookFactory implements Factory
@@ -42,6 +42,7 @@ class BookFactory implements Factory
             ->setPublisher($params['publisher'])
             ->setSummary($params['summary'])
             ->setCover($params['images']['large'])
-            ->setTags(array_column($params['tags'], 'name'));
+            ->setTags(array_column($params['tags'], 'name'))
+            ->setAltUrl($params['alt_url']);
     }
 }

@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Littlesqx\Book\Exception;
+namespace Littlesqx\Book\Exceptions;
 
 /**
- * Class HttpException.
+ * Class InvalidArgumentException.
  */
-class HttpException extends Exception
+class InvalidArgumentException extends Exception
 {
 }
