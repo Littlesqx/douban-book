@@ -19,6 +19,7 @@ use Littlesqx\Book\Entities\Book;
 use Littlesqx\Book\Entities\Entity;
 use Littlesqx\Book\Exceptions\HttpException;
 use Littlesqx\Book\Exceptions\InvalidArgumentException;
+use Littlesqx\Book\Exceptions\InvalidResponseException;
 use PHPUnit\Framework\TestCase;
 use Mockery\Matcher\AnyArgs;
 
@@ -59,17 +60,19 @@ class ApplicationTest extends TestCase
      */
     public function testGetBook(string $isbn)
     {
+        // test case 1
         $response = new Response(200, [], '{}');
         $client = \Mockery::mock(Client::class);
         $client->allows()
             ->get('https://api.douban.com/v2/book/isbn/'.$isbn)
             ->andReturn($response);
 
+        $this->expectException(InvalidResponseException::class);
         $app = \Mockery::mock(Application::class)->makePartial();
         $app->allows()->getHttpClient()->andReturn($client);
+        $app->getBook($isbn);
 
-        $this->assertEmpty($app->getBook($isbn));
-
+        // test case 2
         $response = new Response(
             200, [],
             '{"title":"","price":"","author":[],"publisher":""'

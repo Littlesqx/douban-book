@@ -15,6 +15,7 @@ use GuzzleHttp\Client;
 use Littlesqx\Book\Entities\Book;
 use Littlesqx\Book\Exceptions\HttpException;
 use Littlesqx\Book\Exceptions\InvalidArgumentException;
+use Littlesqx\Book\Exceptions\InvalidResponseException;
 
 class Application
 {
@@ -71,6 +72,7 @@ class Application
      *
      * @throws HttpException
      * @throws InvalidArgumentException
+     * @throws InvalidResponseException
      */
     public function getBook(string $isbn): ? Book
     {
@@ -84,6 +86,9 @@ class Application
                 return BookFactory::make($response->getBody()->getContents());
             }
         } catch (\Exception $e) {
+            if ($e instanceof InvalidResponseException) {
+                throw $e;
+            }
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
     }

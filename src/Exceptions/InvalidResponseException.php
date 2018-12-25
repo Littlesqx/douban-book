@@ -12,7 +12,7 @@
 namespace Littlesqx\Book\Exceptions;
 
 
-class ContentNotFoundException extends Exception
+class InvalidResponseException extends Exception
 {
 
 }

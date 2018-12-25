@@ -12,6 +12,7 @@
 namespace Littlesqx\Book;
 
 use Littlesqx\Book\Entities\Book;
+use Littlesqx\Book\Exceptions\InvalidResponseException;
 use Littlesqx\Book\Interfaces\Factory;
 
 class BookFactory implements Factory
@@ -19,15 +20,16 @@ class BookFactory implements Factory
     /**
      * make a book entity.
      *
-     * @param $params
+     * @param $body
      *
-     * @return Book|null
+     * @return Book
+     * @throws InvalidResponseException
      */
-    public static function make($params): ? Book
+    public static function make($body): Book
     {
-        $params = \json_decode($params, true);
+        $params = \json_decode($body, true);
         if (!isset($params['title'])) {
-            return null;
+            throw new InvalidResponseException("Response body: {$body}");
         }
         $book = new Book();
 

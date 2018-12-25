@@ -32,18 +32,16 @@ $isbn = '9787115473899';
 // get a book entity
 try {
     $book = $app->getBook($isbn);
-    if ($book) {
-        // use as an array
-        $book->toArray();
-        
-        // or get json format
-        $book->toJSON();
-        
-        // also, get property directly is allowed
-        $book->getTitle();
-        $book->getPrice();
-    }
-} catch (\Exceptions $exception) {
+    // use as an array
+    $book->toArray();
+            
+    // or get json format
+    $book->toJSON();
+            
+    // also, get property directly is allowed
+    $book->getTitle();
+    $book->getPrice();
+} catch (\Exception $exception) {
     // handle exception
 }
 
