@@ -74,7 +74,7 @@ class Application
      * @throws InvalidArgumentException
      * @throws InvalidResponseException
      */
-    public function getBook(string $isbn): ? Book
+    public function getBook(string $isbn): Book
     {
         if (13 !== strlen($isbn) && 10 !== strlen($isbn)) {
             throw new InvalidArgumentException('Invalid isbn code(isbn10 or isbn13): '.$isbn);
