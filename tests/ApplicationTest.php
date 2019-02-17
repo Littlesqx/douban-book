@@ -77,7 +77,7 @@ class ApplicationTest extends TestCase
             200, [],
             '{"title":"","price":"","author":[],"publisher":""'
             .',"author_intro":"","subtitle":"","isbn13":"","images":{"large":""},'
-            .'"catalog":"","pubdate":"","tags":[],"summary":"","alt_url":""}'
+            .'"catalog":"","pubdate":"","tags":[],"summary":"","alt":""}'
         );
         $client = \Mockery::mock(Client::class);
         $client->allows()

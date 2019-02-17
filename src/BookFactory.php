@@ -46,6 +46,6 @@ class BookFactory implements Factory
             ->setSummary($params['summary'])
             ->setCover($params['images']['large'])
             ->setTags(array_column($params['tags'], 'name'))
-            ->setAltUrl($params['alt_url']);
+            ->setAltUrl($params['alt']);
     }
 }
