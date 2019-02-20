@@ -18,7 +18,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function register()
     {
         $this->app->singleton(Application::class, function () {
-           return new Application();
+            return new Application();
         });
         $this->app->alias(Application::class, 'douban-book');
     }
