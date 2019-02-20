@@ -23,7 +23,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->alias(Application::class, 'douban-book');
     }
 
-    public function provider()
+    public function provides()
     {
         return [Application::class, 'douban-book'];
     }
