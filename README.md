@@ -25,6 +25,8 @@ use Littlesqx\Book\Application;
 
 // init app
 $app = new Application();
+// For laravel
+// $app = app('douban-book');
 
 // book's isbn10/isbn13 code
 $isbn = '9787115473899';
