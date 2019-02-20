@@ -27,5 +27,10 @@
     },
     "scripts": {
         "test": "./vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": [
+            "Littlesqx\\Book\\ServiceProvider"
+        ]
     }
 }
